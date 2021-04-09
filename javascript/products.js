@@ -130,11 +130,11 @@ function unblurItems(){
 function addToCart(element, type){
 
     var quantity = element.parentElement.previousElementSibling.children[1].value;
-    var item = element.parentElement.parentElement.previousElementSibling.children[1].innerText;
-    var price = element.parentElement.parentElement.previousElementSibling.children[2].innerText;
-    var image = element.parentElement.parentElement.previousElementSibling.children[0].getAttribute("src");
+    var item = element.getAttribute("data-name");
+    var price = element.getAttribute("data-price");
+    var image = element.getAttribute("data-image");
     var cart = document.getElementsByClassName("items")[0];
-    var type = element.parentElement.parentElement.parentElement.className.split(" ")[1];
+    var type = element.getAttribute("data-type");
 
     if(quantity == 0){
         alert("Please select the quantity");

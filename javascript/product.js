@@ -17,7 +17,7 @@ function addProduct(product){
 
 function showProducts(product){
 
-    var htmlString = `
+    var productTile = `
     <div class="items `+ product.type +`">
         <div class="image">
             <img src="`+ product.image +`">
@@ -44,13 +44,14 @@ function showProducts(product){
             </dic>
 
             <div class="_cart">
-                <input class="add-to-cart" type="button" onclick="addToCart(this)">
+                <input class="add-to-cart" type="button" data-name = "`+ product.name +`" data-image = "`+ product.image +`" data-price = "`+ product.price +`" data-type = "`+ product.type +`" onclick="addToCart(this)">
             </div>
-        </div>
 
+        </div>
+        
     </div>`;
 
-    document.getElementsByClassName("item-container")[0].innerHTML += htmlString;
+    document.getElementsByClassName("item-container")[0].innerHTML += productTile;
 }
 
 window.onload = function(){
@@ -61,4 +62,12 @@ var i = 1;
 function test(){
     showProducts(new Product("Product " + i, 25, "images/tshirt_1.jpg", "tshirt"));
     i++;
+}
+
+function addToCartTest(product){
+
+    var name = product.getAttribute("data-name");
+    var price = product.getAttribute("data-price");
+
+    alert(name + " : " + price);
 }
