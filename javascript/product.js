@@ -63,11 +63,3 @@ function test(){
     showProducts(new Product("Product " + i, 25, "images/tshirt_1.jpg", "tshirt"));
     i++;
 }
-
-function addToCartTest(product){
-
-    var name = product.getAttribute("data-name");
-    var price = product.getAttribute("data-price");
-
-    alert(name + " : " + price);
-}
