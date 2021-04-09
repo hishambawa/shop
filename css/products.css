@@ -287,8 +287,8 @@ li{
 /* #region Products */
 
 .item-container{
-    display:grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
     padding: 10px;
     float:right;
     width: 70vw;

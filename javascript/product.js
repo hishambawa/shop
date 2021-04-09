@@ -9,14 +9,20 @@ function Product(name, price, image, type){
     }
 }
 
+var item = [];
+
+function addProduct(product){
+    item.push(product);
+}
+
 function showProducts(product){
 
     var htmlString = `
     <div class="items `+ product.type +`">
         <div class="image">
-            <img src="images/tshirt_2.jpg">
-            <figcaption>Sweatshirt</figcaption>
-            <figcaption class="price">$75</figcaption>
+            <img src="`+ product.image +`">
+            <figcaption>`+ product.name +`</figcaption>
+            <figcaption class="price">$ `+ product.price +`</figcaption>
         </div>
 
         <div class="cart-options">
@@ -32,11 +38,9 @@ function showProducts(product){
             </div>
 
             <dic class="quantity">
-
                 <input type="button" name = "minus" value="-" onclick="changeQuantity(this)">
                 <input type="text" value = 0 maxlength="2">
                 <input type="button" name = "plus" value="+" onclick="changeQuantity(this)">
-
             </dic>
 
             <div class="_cart">
@@ -45,14 +49,16 @@ function showProducts(product){
         </div>
 
     </div>`;
+
+    document.getElementsByClassName("item-container")[0].innerHTML += htmlString;
 }
 
-var item = [];
+window.onload = function(){
+    item.forEach(showProducts);
+}
 
-    item.push(new Product("Product 1", 25, "images/tshirt2.png", "tshirt"));
-    item.push(new Product("Product 2", 25, "images/tshirt2.png", "tshirt"));
-
-    item[0].getInfo();
-    item[1].getInfo();
-
-    item.forEach(showProducts(product));
+var i = 1;
+function test(){
+    showProducts(new Product("Product " + i, 25, "images/tshirt_1.jpg", "tshirt"));
+    i++;
+}
