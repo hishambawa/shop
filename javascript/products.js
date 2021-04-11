@@ -51,9 +51,6 @@ function filterItems(element){
 
         i++;
     }
-
-    // Maintain the position of the Footer
-    document.getElementsByClassName("footer")[0].style = "margin-top:45%";
 }
 
 function filterPrice(element){
@@ -67,9 +64,6 @@ function filterPrice(element){
 
         if((element.id == "40") && (amount > 40 && items[i].className.split(" ")[0] == "items")){
             items[i].style.display = "none";
-
-            // Maintain the position of the Footer
-            document.getElementsByClassName("footer")[0].style = "margin-top:45%";
         }
 
         else if((element.id == "40") && items[i].className.split(" ")[0] == "items"){
@@ -78,9 +72,6 @@ function filterPrice(element){
 
         if((element.id == "60") && (amount > 60 && items[i].className.split(" ")[0] == "items")){
             items[i].style.display = "none";
-
-            // Maintain the position of the Footer
-            document.getElementsByClassName("footer")[0].style = "margin-top:60%";
         }
 
         else if((element.id == "60") && items[i].className.split(" ")[0] == "items"){
@@ -89,9 +80,6 @@ function filterPrice(element){
 
         if((element.id == "100") && (amount > 100 && items[i].className.split(" ")[0] == "items")){
             items[i].style.display = "none";
-
-            // Maintain the position of the Footer
-            document.getElementsByClassName("footer")[0].style = "margin-top:80%";
         }
 
         else if((element.id == "100") && items[i].className.split(" ")[0] == "items"){
@@ -110,11 +98,6 @@ function getAll(){
         items[i].style.display = "";
         i++;
     }
-
-    // Maintain the position of the Footer
-    document.getElementsByClassName("footer")[0].style = "margin-top:100%";
-
-
 }
 
 function blurItems(){

@@ -59,6 +59,7 @@ window.onload = function(){
 }
 
 var i = 1;
+
 function test(){
     showProducts(new Product("Product " + i, 25, "images/tshirt_1.jpg", "tshirt"));
     i++;
