@@ -8,19 +8,67 @@
 
         <link href="css/default.css" rel="stylesheet">
         <link href="css/layout.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/media.css" rel="stylesheet">
 
         <script src="javascript/product.js"></script>
-        <script src="javascript/products.js"></script>
+        <script src="javascript/script.js"></script>
     </head>
     <body>
         <div class="container" id="container">
 
-            <div id="header"></div>
+            <div id="header">
 
-            <div id="sidebar"></div>
+                <h1 id="logo">LOGO</h1>
+                
+                <div id="menu" onclick="menu()">
+                    <img src="icons/menu.svg">
+                </div>
+
+                <div id="cart">
+                    <img src="icons/bag.svg">
+                </div>
+
+            </div>
+
+            <ul id="navigation">
+                <li>HOME</li>
+                <li>SHOP</li>
+                <li>ABOUT</li>
+                <li>CONTACT</li>
+            </ul>
+
+            <div id="sidebar">
+
+                <button id="filter-btn" onclick="filter()">Filter</button>
+    
+            </div>
+
+            <div id="filter">
+
+                <h3 class="mobile-hidden">Categories</h3>
+                <ul>
+                    <li id = "all" onclick = "filter(); getAll()">All</li>
+                    <li id = "tshirt" onclick = "filter(); filterItems(this)">T-Shirts</li>
+                    <li id = "shorts" onclick = "filter(); filterItems(this)">Shorts</li>
+                    <li id = "shoes" onclick = "filter(); filterItems(this)">Shoes</li>
+                    <li id = "accessories" onclick = "filter(); filterItems(this)">Accessories</li>
+
+                    <hr>
+
+                    <li id="price"><span class="mobile-hidden">Price</span> 
+                        <ul id="price-filter">
+                            <li id="40" onclick="filterPrice(this)">Under $40</li>
+                            <li id="60" onclick="filterPrice(this)">Under $60</li>    
+                            <li id="100" onclick="filterPrice(this)">Under $100</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
 
             <div id="content"></div>
-            
+
             <div id="footer"></div>
 
         </div>
