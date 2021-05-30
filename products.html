@@ -1,4 +1,4 @@
-<!-- This is the updated version -->
+<!-- This is the new layout version 1 -->
 
 <!DOCTYPE html>
 <html>
@@ -8,14 +8,15 @@
 
         <link href="css/main.css" rel="stylesheet">
         <link href="css/products.css" rel="stylesheet">
+        <link href="css/layout.css" rel="stylesheet">
 
         <script src="javascript/product.js"></script>
         <script src="javascript/products.js"></script>
     </head>
     <body>
-        <div class="container">
+        <div class="container" id="container">
 
-            <div class="navbar">
+            <div class="navbar" id="header">
 
                 <a href="#" class="logo">ARENA</a>
 
@@ -50,7 +51,7 @@
                 <div id="modal-body"></div>
             </div>
 
-            <div class="filter"onclick="hideModal()">
+            <div class="filter"onclick="hideModal()" id="sidebar">
                 <h3>Categories</h3>
                 <ul>
                     <li id = "all" onclick = "getAll()">All</li>
@@ -71,7 +72,110 @@
                 </ul>
             </div>
 
-            <div class="item-container" onclick="hideModal()"></div>
+            <div class="item-container" id="content" onclick="hideModal()">
+            
+                <div class="items tshirt">
+                    <div class="image">
+                        <img src="images/tshirt_1.jpg">
+                        <figcaption>Product 1</figcaption>
+                        <figcaption class="price">$ 25</figcaption>
+                    </div>
+            
+                    <div class="cart-options">
+            
+                        <div class="size">
+                            <input type="checkbox" name="s-size" class="s">
+                            <input type="checkbox" name="s-size" class="m">
+                            <input type="checkbox" name="s-size" class="l">
+            
+                            <span onclick="selectSize(this)">S</span>
+                            <span onclick="selectSize(this)">M</span>
+                            <span onclick="selectSize(this)">L</span>
+                        </div>
+            
+                        <dic class="quantity">
+                            <input type="button" name="minus" value="-" onclick="changeQuantity(this)">
+                            <input type="text" value="0" maxlength="2">
+                            <input type="button" name="plus" value="+" onclick="changeQuantity(this)">
+                        </dic>
+            
+                        <div class="_cart">
+                            <input class="add-to-cart" type="button" data-name="Product 1" data-image="images/tshirt_1.jpg" data-price="25" data-type="tshirt" onclick="addToCart(this)">
+                        </div>
+            
+                    </div>
+                    
+                </div>
+
+                <div class="items tshirt">
+                    <div class="image">
+                        <img src="images/tshirt_1.jpg">
+                        <figcaption>Product 1</figcaption>
+                        <figcaption class="price">$ 25</figcaption>
+                    </div>
+            
+                    <div class="cart-options">
+            
+                        <div class="size">
+                            <input type="checkbox" name="s-size" class="s">
+                            <input type="checkbox" name="s-size" class="m">
+                            <input type="checkbox" name="s-size" class="l">
+            
+                            <span onclick="selectSize(this)">S</span>
+                            <span onclick="selectSize(this)">M</span>
+                            <span onclick="selectSize(this)">L</span>
+                        </div>
+            
+                        <dic class="quantity">
+                            <input type="button" name="minus" value="-" onclick="changeQuantity(this)">
+                            <input type="text" value="0" maxlength="2">
+                            <input type="button" name="plus" value="+" onclick="changeQuantity(this)">
+                        </dic>
+            
+                        <div class="_cart">
+                            <input class="add-to-cart" type="button" data-name="Product 1" data-image="images/tshirt_1.jpg" data-price="25" data-type="tshirt" onclick="addToCart(this)">
+                        </div>
+            
+                    </div>
+                    
+                </div>
+
+                <div class="items tshirt">
+                    <div class="image">
+                        <img src="images/tshirt_1.jpg">
+                        <figcaption>Product 1</figcaption>
+                        <figcaption class="price">$ 25</figcaption>
+                    </div>
+            
+                    <div class="cart-options">
+            
+                        <div class="size">
+                            <input type="checkbox" name="s-size" class="s">
+                            <input type="checkbox" name="s-size" class="m">
+                            <input type="checkbox" name="s-size" class="l">
+            
+                            <span onclick="selectSize(this)">S</span>
+                            <span onclick="selectSize(this)">M</span>
+                            <span onclick="selectSize(this)">L</span>
+                        </div>
+            
+                        <dic class="quantity">
+                            <input type="button" name="minus" value="-" onclick="changeQuantity(this)">
+                            <input type="text" value="0" maxlength="2">
+                            <input type="button" name="plus" value="+" onclick="changeQuantity(this)">
+                        </dic>
+            
+                        <div class="_cart">
+                            <input class="add-to-cart" type="button" data-name="Product 1" data-image="images/tshirt_1.jpg" data-price="25" data-type="tshirt" onclick="addToCart(this)">
+                        </div>
+            
+                    </div>
+                    
+                </div>
+            
+            </div>
+
+            <div id="footer"></div>
 
             <!-- Test -->
 

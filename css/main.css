@@ -62,11 +62,6 @@ body{
     color: #ee4332;
 }
 
-.container{
-    z-index: 0;
-    padding: 25px;
-}
-
 h1{
     font-family: 'Raleway', sans-serif;
     color: #ffffff;
